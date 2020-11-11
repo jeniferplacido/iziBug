@@ -29,6 +29,7 @@ class LoginComponent extends React.Component {
                             <label htmlFor="form-toggler"></label>
                         </div>
 
+                    
                     </header>
                     <LoginForm mode={this.state.mode} onSubmit={this.props.onSubmit} />
                 </section>
