@@ -11,10 +11,12 @@ class LoginComponent extends React.Component {
             mode: this.props.mode
         }
     }
+
     toggleMode() {
-        var newMode = this.state.mode === 'login' ? 'signup' : 'login';
+        let newMode = this.state.mode === 'login' ? 'signup' : 'login';
         this.setState({ mode: newMode});
     }
+
     render() {
         return (
             <div>
@@ -24,7 +26,7 @@ class LoginComponent extends React.Component {
                         <h1>{this.state.mode === 'login' ? 'Entrar' : 'Cadastre-se'}</h1>
 
                         <div className="form-block__toggle-block">
-                            <span>{this.state.mode === 'login' ? 'Não' : 'Já'} possui uma conta? Clique aqui &#8594;</span>
+                            <span>{this.state.mode === 'login' ? 'Não' : 'Já'} possui uma conta?   Clique aqui</span>
                             <input id="form-toggler" type="checkbox" onClick={this.toggleMode.bind(this)} />
                             <label htmlFor="form-toggler"></label>
                         </div>
@@ -38,6 +40,10 @@ class LoginComponent extends React.Component {
     }
 }
 
+// const Input = ({ id, type, label, disabled }) => (
+//     <input className="form-group__input" type={type} id={id} placeholder={label} disabled={disabled}/>
+// );
+
 class LoginForm extends React.Component {
     // eslint-disable-next-line
     constructor(props) {
@@ -48,14 +54,14 @@ class LoginForm extends React.Component {
         <form onSubmit={this.props.onSubmit}>
             <div className="form-block__input-wrapper">
                 <div className="form-group form-group--login">
-                    <Input type="text" id="username" label="E-mail" disabled={this.props.mode === 'signup'}/>
-                    <Input type="password" id="password" label="Senha" disabled={this.props.mode === 'signup'}/>
+                    <input className="form-group__input" type="text" id="username" placeholder="E-mail" disabled={this.props.mode === 'signup'}/>
+                    <input className="form-group__input" type="password" id="password" placeholder="Senha" disabled={this.props.mode === 'signup'}/>
                 </div>
                 <div className="form-group form-group--signup">
-                    <Input type="text" id="fullname" label="Nome Completo" disabled={this.props.mode === 'login'} />
-                    <Input type="email" id="email" label="E-mail" disabled={this.props.mode === 'login'} />
-                    <Input type="password" id="createpassword" label="Senha" disabled={this.props.mode === 'login'} />
-                    <Input type="password" id="repeatpassword" label="Confirmar Senha" disabled={this.props.mode === 'login'} />
+                    <input className="form-group__input" type="text" id="fullname" placeholder="Nome Completo" disabled={this.props.mode === 'login'} />
+                    <input className="form-group__input" type="email" id="email" placeholder="E-mail" disabled={this.props.mode === 'login'} />
+                    <input className="form-group__input" type="password" id="createpassword" placeholder="Senha" disabled={this.props.mode === 'login'} />
+                    <input className="form-group__input" type="password" id="repeatpassword" placeholder="Confirmar Senha" disabled={this.props.mode === 'login'} />
                 </div>
             </div>
             <button className="button button--primary full-width" type="submit">{this.props.mode === 'login' ? 'Entrar' : 'Cadastrar'}</button>
@@ -65,9 +71,7 @@ class LoginForm extends React.Component {
     }
 }
 
-const Input = ({ id, type, label, disabled }) => (
-    <input className="form-group__input" type={type} id={id} placeholder={label} disabled={disabled}/>
-);
+
 
 const App = () => (
     <div className={`app app--is-${mode}`}>
