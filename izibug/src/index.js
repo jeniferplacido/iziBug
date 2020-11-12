@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter} from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 import LoginComponent from './components/tela-login'
-
+fdafad
 import './css/style.css';
 
 // const Input = ({ id, type, label, disabled }) => (
-    //     <input className="form-group__input" type={type} id={id} placeholder={label} disabled={disabled}/>
-    // );
-    
+//     <input className="form-group__input" type={type} id={id} placeholder={label} disabled={disabled}/>
+// );
+
 // const mode = 'login';
 
 const App = () => (
@@ -17,7 +17,7 @@ const App = () => (
         <LoginComponent
             mode="login"
             onSubmit={
-                function() {
+                function () {
                     console.log('submit');
                 }
             }
@@ -25,9 +25,9 @@ const App = () => (
     </div>
 );
 
-ReactDOM.render( 
+ReactDOM.render(
     <BrowserRouter>
-        <App/> 
+        <App />
     </BrowserRouter>,
     document.getElementById("app")
 );
