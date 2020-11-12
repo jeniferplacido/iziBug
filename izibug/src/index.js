@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+<<<<<<< HEAD
 import './css/style.css';
 
 const mode = 'login';
@@ -88,4 +89,22 @@ const App = () => (
 );
 
 ReactDOM.render(<App />, document.getElementById("app"));
+=======
+import {BrowserRouter} from 'react-router-dom'
+
+import Modulo_1 from './components/modulo_1'
+
+import './css/style.css';
+
+const App = () => (
+    <Modulo_1/>
+);
+
+ReactDOM.render( 
+    <BrowserRouter>
+        <App/> 
+    </BrowserRouter>,
+    document.getElementById("app")
+);
+>>>>>>> 4db0a8dfd7c07a19e7cc34a4f4bebef6c1ce939f
 
