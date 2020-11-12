@@ -1,10 +1,26 @@
-import {Component} from 'react'
+import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
+
+import './style.css'
 
 class LoginForm extends Component {
     // eslint-disable-next-line
     constructor(props) {
         super(props);
     }
+
+    verifyMode = () => {
+        if (this.props.mode === 'login') {
+            return (
+                <Link to="/esqueci-minha-senha" id="btn_Esqueci_Senha"> &#8594; Esqueci minha senha</Link>
+            )
+        } else if (this.props.mode === 'signup') {
+            return (
+                <Link to="/esqueci-minha-senha" id="btn_Esqueci_Senha"></Link>
+            )
+        }
+    }
+
     render() {
         return (
         <form onSubmit={this.props.onSubmit}>
@@ -21,7 +37,7 @@ class LoginForm extends Component {
                 </div>
             </div>
             <button className="button button--primary full-width" type="submit">{this.props.mode === 'login' ? 'Entrar' : 'Cadastrar'}</button>
-            <span> &#8594; Esqueci minha senha</span>
+            {this.verifyMode()}
         </form>
         )
     }
