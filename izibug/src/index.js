@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'
 
 import LoginComponent from './components/tela-login'
-fdafad
+
 import './css/style.css';
 
 // const Input = ({ id, type, label, disabled }) => (
