@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LoginForm from './login-form'
+import LoginForm from '../login-form'
 
 // import './css/style.css';
 
@@ -12,7 +12,7 @@ class LoginComponent extends React.Component {
         }
     }
 
-    toggleMode() {
+    toggleMode = () => {
         let newMode = this.state.mode === 'login' ? 'signup' : 'login';
         this.setState({ mode: newMode});
     }
@@ -27,7 +27,7 @@ class LoginComponent extends React.Component {
 
                         <div className="form-block__toggle-block">
                             <span>{this.state.mode === 'login' ? 'Não' : 'Já'} possui uma conta?   Clique aqui</span>
-                            <input id="form-toggler" type="checkbox" onClick={this.toggleMode.bind(this)} />
+                            <input id="form-toggler" type="checkbox" onClick={this.toggleMode} />
                             <label htmlFor="form-toggler"></label>
                         </div>
 
