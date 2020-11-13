@@ -1,19 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {BrowserRouter} from 'react-router-dom'
+import { BrowserRouter, Route } from 'react-router-dom'
 
 import Modulo_1 from './components/modulo_1'
+import ForgetPassword from './components/modulo_1/esqueci-senha'
 
 import './css/style.css';
 
 const App = () => (
     // eslint-disable-next-line
-    <Modulo_1 />
+    <>
+        <Route exact path="/" component={Modulo_1} />
+
+        <Route path="/esqueci-minha-senha" component={ForgetPassword} />
+    </>
+
 );
 
-ReactDOM.render( 
+ReactDOM.render(
     <BrowserRouter>
-        <App/> 
+        <App />
     </BrowserRouter>,
     document.getElementById("app")
 );
