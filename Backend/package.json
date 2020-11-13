@@ -1,0 +1,21 @@
+{
+  "name": "start-server",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "sh start.sh"
+  },
+  "dependencies": {
+    "atob": "^2.1.2",
+    "axios": "^0.20.0",
+    "btoa": "^1.2.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "~4.16.1",
+    "js-sha512": "^0.8.0",
+    "mongoose": "^5.10.0",
+    "morgan": "~1.9.1",
+    "nodemailer": "^6.4.11",
+    "nodemon": "^2.0.4"
+  }
+}
