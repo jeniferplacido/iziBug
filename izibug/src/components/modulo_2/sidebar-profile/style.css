@@ -1,3 +1,52 @@
-#teste h1 {
-    color: black;
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,700');
+
+.sidebar-profile {
+    display: flex;
+    flex: 50px;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 5px;
+    width: 200px;
+    height: 550px;
+    overflow: hidden;
+    margin: 50px;
+    font-size: 1.4rem;
+    padding: 10px 0px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    background-color: rgba(255, 255, 255, 0.13);
+    color: #fff;
+    -webkit-box-shadow: 0px 0px 16px 9px rgba(0, 0, 0, 0.07);
+    -moz-box-shadow: 0px 0px 16px 9px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 0px 16px 9px rgba(0, 0, 0, 0.07);
+}
+
+.sidebar-profile ul li {
+    list-style: none;
+    margin: 30px 40px 0px 0px;
+
+}
+
+.sidebar-profile li {
+    list-style: none;
+    margin: 10px;
+
+}
+
+.sidebar-profile img {
+    border-radius: 50%;
+    margin: 15px;
+    color: white;
+    -webkit-box-shadow: 0px 0px 16px 9px rgba(0, 0, 0, 0.07);
+    -moz-box-shadow: 0px 0px 16px 9px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 0px 16px 9px rgba(0, 0, 0, 0.07);
+
+}
+
+body{
+    background-color: #433b7c;
+}
+
+.full-width {
+    width: 100%;
 }
