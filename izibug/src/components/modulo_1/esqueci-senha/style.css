@@ -1,3 +1,4 @@
-#teste h1 {
-    color: black;
+#teste input  {
+    color: black !important;
+    background-color: red;
 }
