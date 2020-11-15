@@ -1,5 +1,10 @@
 import { Component } from 'react'
 
+import Tela_Esqueci_Senha from './tela-esqueci-senha'
+
+import './style.css'
+
+import '../../../css/style.css'
 
 class ForgetPassword extends Component {
   // eslint-disable-next-line
@@ -8,24 +13,13 @@ class ForgetPassword extends Component {
   }
 
   submitEmail() {
-    this.setState(prevState => ({click: prevState.click}));
+    this.setState(prevState => ({ click: prevState.click }));
   }
 
   render() {
     return (
-      <form onSubmit={this.props.onSubmit}>
-        <div className="form-block__input-wrapper">
-          <div className="form-group form-group--login">
-            {/* eslint-disable-next-line */}
-            <input className="form-group__input" type="text" id="username" placeholder="E-mail" disabled={this.props.mode === 'signup'} />
-            <button onClick = {this.submitEmail}>Enviar</button>
-            {/* exibir um alerta na tela dizendo que o token foi enviado para o e-mail inserido  */}
-            <input className="form-group__input" type="password" id="password" placeholder="Nova Senha" disabled={this.props.mode === 'signup'} />        
-            <input className="form-group__input" type="password" id="password" placeholder="Confirmar nova Senha" disabled={this.props.mode === 'signup'} />
-          </div>
-        </div>
-      </form>
-    ) 
+      <Tela_Esqueci_Senha />
+    )
   }
 }
 export default ForgetPassword;
