@@ -1,63 +1,69 @@
-import React from 'react';
-import { Link } from 'react-router-dom'
+import React, { useState } from 'react';
+import Modal from 'react-modal'
 
 import './style.css'
 
-class Tela_Esqueci_Senha extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      mode: 'signup'
-    }
-  }
-
-  render() {
-    return (
-      <div>
-        <div className={`form-block-wrapper form-block-wrapper--is-${this.state.mode}`} ></div>
-        <section className={`form-block form-block--is-${this.state.mode}`}>
-          <header className="form-block__header">
-            <h1>Preencha o seu email</h1>
-          </header>
-          <Esqueci_Form mode={this.state.mode} onSubmit={this.props.onSubmit} />
-        </section>
-      </div>
-    )
-  }
+function Tela_Esqueci_Senha() {
+  return (
+    <div>
+      <div className={`form-block-wrapper form-block-wrapper--is-signup`} ></div>
+      <section className={`form-block form-block--is-signup`}>
+        <header className="form-block__header">
+          <h1>Preencha o seu email</h1>
+        </header>
+        <Esqueci_Form mode='signup' />
+      </section>
+    </div>
+  )
 }
 
-class Esqueci_Form extends React.Component {
+function Esqueci_Form(props) {
   // eslint-disable-next-line
-  constructor(props) {
-    super(props);
-  }
 
-  verfyEmail = () => {
+  const [modalIsOpen, setModalIsOpen] = useState(false)
+  const [mensagemModal, setMensagemModal] = useState('')
+
+  const verfyEmail = (e) => {
+    e.preventDefault();
 
     const valueInputEmail = document.getElementById('email').value
 
     if (valueInputEmail.includes('@')) {
       if (valueInputEmail.includes('.com')) {
-        window.location.href='/esqueci-minha-senha/token-confirm'
+        window.location.href = '/esqueci-minha-senha/token-confirm'
       }
     } else {
-      alert('Preencha o email corretamente')
-      window.location.href='/esqueci-minha-senha'
+      setMensagemModal('Preencha o email corretamente')
+      openModal()
     }
   }
 
-  render() {
-    return (
-      <form id="form_esqueci-senha" onSubmit={this.props.onSubmit}>
+  function openModal() {
+    setModalIsOpen(true)
+  }
+
+  function closeModal() {
+    setModalIsOpen(false)
+    window.location.href = '/esqueci-minha-senha'
+  }
+
+  return (
+    <>
+
+      <Modal isOpen={modalIsOpen}>
+        <span onClick={closeModal}>X</span>
+        <h2>{mensagemModal}</h2>
+      </Modal>
+
+      <form id="form_esqueci-senha">
         <div className="form-block__input-wrapper--forgetPass">
           <div className="form-group form-group--signup ">
-            <input className="form-group__input" type="email" id="email" placeholder="Confirmar e-mail" disabled={this.props.mode === 'login'} />
+            <input className="form-group__input" type="email" id="email" placeholder="Confirmar e-mail" disabled={props.mode === 'login'} />
           </div>
         </div>
-        <a className="button button--primary full-width" onClick={this.verfyEmail}>Enviar</a>
-      </form>
-    )
-  }
+        <a className="button button--primary full-width" onClick={verfyEmail}>Enviar</a>
+      </form></>
+  )
 }
 
 export default Tela_Esqueci_Senha;
