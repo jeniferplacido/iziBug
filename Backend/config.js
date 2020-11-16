@@ -10,14 +10,14 @@ let config = {
     server:{
         porta: 3000
     },
-    front:{
-        baseUrl: "https://homologacao.ambientemedicamento.com.br",
-        forcarHTTPS: true, //Defina para true se desejar que o redirecionamento para HTTPS seja forçado (é necessário certificado SSL ativo)
-        caminho: "./Front-End/build", //Aqui será definido a pasta de saída onde contém o index.html e os outros arquivos.
-    },
+    // front:{
+    //     baseUrl: "xxxxxxxxxx",
+    //     forcarHTTPS: true, //Defina para true se desejar que o redirecionamento para HTTPS seja forçado (é necessário certificado SSL ativo)
+    //     caminho: "tôusandoaqui", //Aqui será definido a pasta de saída onde contém o index.html e os outros arquivos.
+    // },
     back:{
         // baseUrl: "https://homologacao.ambientemedicamento.com.br/API"
-        baseUrl: "http://localhost:3000/API"
+        baseUrl: "http://localhost:3000/"
     }
     /* email:{
        smtp:{
