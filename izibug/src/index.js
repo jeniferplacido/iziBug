@@ -24,6 +24,7 @@ const App = () => (
         
         <Route exact path="/abrir-chamado" component={Tela_Abrir_Chamado} />
         <Route exact path="/chamados-abertos" component={Tela_Vizualizar_Chamados} />
+        <Route exact path="/perfil-usuario" component={Tela_Vizualizar_Chamados} />
     </>
 
 );
