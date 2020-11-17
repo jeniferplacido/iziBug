@@ -1,8 +1,8 @@
-#tela_visualizar_chamados {
+#Tela_Editar_Perfil {
     display: flex;
 }
 
-#forms_chamados-abertos {
+#forms_editar-perfil {
     width: 100%;
     height: auto;
     background-color: rgba(255, 255, 255, 0.13);
@@ -10,12 +10,37 @@
     border-radius: 5px;
 }
 
-#forms_chamados-abertos h1 {
+#forms_editar-perfil h1 {
     display: flex;
     justify-content: center;
     font-size: 35px;
 }
 
+.forms_up {
+    padding: 0px 20px 0px 20px;
+    /* border-radius: 5px; */
+    /* width: 900px; */
+    width: 950px;
+    min-height: 15px;
+    margin: 0px 25px;
+    padding: 10px;
+    /* display: flex; */
+    justify-content: center
+}
+
 body{
     background-color: #433b7c;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+    .forms_up {
+        width: 80%;
+    }
+}
+
+@media (max-width: 650px)  {
+    .forms_up {
+        width: 80%;
+    }
 }
