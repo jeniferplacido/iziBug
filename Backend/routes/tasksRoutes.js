@@ -49,7 +49,7 @@ router.get('/buscar', async (req, res) => {
       if (body.buscar) {
           const regex = new RegExp(`${String(body.buscar)}+`, 'i')
           console.log(regex)
-          const response = await model('Task').find({ $or:[ {idChamado: regex}, {assunto: regex} , {mensagem: regex} , {solicitante: regex}] }).sort({ createdAt: 'desc' });
+          const response = await model('Task').find({ $or:[ {idChamado: regex}, {assunto: regex} ,{prioridade: regex} , {mensagem: regex} , {solicitante: regex}] }).sort({ createdAt: 'desc' });
           resposta(res, 200, 'OK', 'Busca realizada com sucesso!', response)
       } else {
           return resposta(res, 400, 'ERRO', 'Ocorreu um erro pois o campo "buscar" não foi enviado!')
