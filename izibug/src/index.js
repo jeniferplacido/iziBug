@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom'
 
-import LoginComponent from './components/tela-login'
+import LoginComponent from './components/tela-login';
+import AbrirChamado from "./components/abrir-chamado";
 
 import './css/style.css';
 
@@ -14,7 +15,7 @@ import './css/style.css';
 
 const App = () => (
     <div className={`app app--is-login`}>
-        <LoginComponent
+        <AbrirChamado
             mode="login"
             onSubmit={
                 function () {
