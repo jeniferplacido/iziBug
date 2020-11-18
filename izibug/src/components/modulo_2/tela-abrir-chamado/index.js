@@ -12,25 +12,45 @@ function Tela_Abrir_Chamado() {
             <div id="forms_abrir-chamado">
                 <h1>ABRIR CHAMADO</h1>
 
-                <h2>Cliente</h2>
-                <input disabled={true} placeholder="Samuel Dias" id="username" />
+            <div id="forms_abrir-chamado_I">
+                    <section>
+                        <h2>Cliente</h2>
+                        <input className="input-form" disabled={true} placeholder="Samuel Dias" id="username" />
+                    </section>
+                        
+                    <section>
+                        <h2>Prioridade</h2>
+                        <select className="input-form">
+                            <option value="TI">ALTA</option>
+                            <option value="Marketing">MÉDIA</option>
+                            <option value="RH">BAIXA</option>
+                            {/* <option value=""></option> */}
+                        </select>
+                    </section>
+                        
 
-                <h2>Assunto</h2>
-                <input id="assunto-Ticket" />
+                    <section>
+                        <h2>Setor</h2>
+                        <select className="input-form">
+                            <option value="TI">TI</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="RH">R.H</option>
+                            {/* <option value=""></option> */}
+                        </select>
+                    </section>
+                        
+                        
+            </div>
+            <div id="forms_abrir-chamado_II">
+                    <section>
+                        <h2>Assunto</h2>
+                        <input className="input-form_assunto" id="assunto-Ticket" />
+                    </section>
+            </div>
+                    
 
                 <h2>Mensagem</h2>
                 <textarea id="mensagem-Ticket" />
-
-                <h2>Prioridade</h2>
-                <input disabled={true} placeholder="Intermediária" id="prioridade-Ticket" />
-
-                <h2>Setor</h2>
-                <select>
-                    <option value="TI">TI</option>
-                    <option value="Marketing">Marketing</option>
-                    <option value="RH">R.H</option>
-                    {/* <option value=""></option> */}
-                </select>
 
                 <div id="btn-Enviar-Ticket">
                     <button>Enviar Report</button>
