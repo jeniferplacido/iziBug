@@ -12,12 +12,12 @@ function Tela_Abrir_Chamado() {
             <div id="forms_abrir-chamado">
                 <h1>ABRIR CHAMADO</h1>
 
-            <div id="forms_abrir-chamado_I">
+                <div id="forms_abrir-chamado_I">
                     <section>
                         <h2>Cliente</h2>
                         <input className="input-form" disabled={true} placeholder="Samuel Dias" id="username" />
                     </section>
-                        
+
                     <section>
                         <h2>Prioridade</h2>
                         <select className="input-form">
@@ -27,7 +27,6 @@ function Tela_Abrir_Chamado() {
                             {/* <option value=""></option> */}
                         </select>
                     </section>
-                        
 
                     <section>
                         <h2>Setor</h2>
@@ -38,16 +37,15 @@ function Tela_Abrir_Chamado() {
                             {/* <option value=""></option> */}
                         </select>
                     </section>
-                        
-                        
-            </div>
-            <div id="forms_abrir-chamado_II">
+
+                </div>
+                <div id="forms_abrir-chamado_II">
                     <section>
                         <h2>Assunto</h2>
-                        <input className="input-form_assunto" id="assunto-Ticket" />
+                        <input id="assunto-Ticket" />
                     </section>
-            </div>
-                    
+                </div>
+
 
                 <h2>Mensagem</h2>
                 <textarea id="mensagem-Ticket" />

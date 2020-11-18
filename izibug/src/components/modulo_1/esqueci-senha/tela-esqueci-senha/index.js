@@ -28,10 +28,8 @@ function Esqueci_Form(props) {
 
     const valueInputEmail = document.getElementById('email').value
 
-    if (valueInputEmail.includes('@')) {
-      if (valueInputEmail.includes('.com')) {
+    if (valueInputEmail.includes('@') && valueInputEmail.includes('.com')) {
         window.location.href = '/esqueci-minha-senha/token-confirm'
-      }
     } else {
       setMensagemModal('Preencha o email corretamente')
       openModal()

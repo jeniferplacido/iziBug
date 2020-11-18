@@ -10,20 +10,30 @@ function Tela_Editar_Perfil() {
             <Sidebar_Profile />
 
             <div id="forms_editar-perfil">
-            
-            <h3>Nome</h3>
-            <input className="forms_up" type="text"/>
-            <h3>EMAIL RONALDO</h3>
-            <input className="forms_up" type="text"/>
-            <h3>Categoria/cargo</h3>
-            <input className="forms_up" type="text"/>
-            <h3>Alterar foto</h3>
-            <img src="https://lnb.com.br/wp-content/uploads/2016/10/logo-brasilia-1-150x150.png"/>
-            <h3>Alterar senha</h3>
-            <input className="forms_low" type="text"/>
-            <h3>Confirmar senha</h3>
-            <input className="forms_low" type="text"/>
-                          
+
+                <h3>Nome</h3>
+                <input className="forms_up" type="text" />
+
+                <h3>EMAIL RONALDO</h3>
+                <input className="forms_up" type="text" />
+
+                <h3>Categoria/cargo</h3>
+                <select className="input-form">
+                    <option value="TI">TI</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="RH">R.H</option>
+                    {/* <option value=""></option> */}
+                </select>
+
+                <h3>Alterar foto</h3>
+                <img src="https://lnb.com.br/wp-content/uploads/2016/10/logo-brasilia-1-150x150.png" />
+
+                <h3>Alterar senha</h3>
+                <input className="forms_low" type="text" />
+
+                <h3>Confirmar senha</h3>
+                <input className="forms_low" type="text" />
+
             </div>
         </div>
     )

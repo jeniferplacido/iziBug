@@ -36,7 +36,6 @@ function Tela_Confirm_Token(props) {
         } else {
             setMensagemModal('Você digitou o Token incorreto!')
             openModal()
-            
         }
     }
 
@@ -55,6 +54,7 @@ function Tela_Confirm_Token(props) {
                 <span onClick={closeModal}>X</span>
                 <h2>{mensagemModal}</h2>
             </Modal>
+
             <div>
                 <div className='form-block-wrapper form-block-wrapper--is-signup' ></div>
                 <section className='form-block form-block--is-signup'>
