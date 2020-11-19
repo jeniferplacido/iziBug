@@ -98,11 +98,14 @@
 }
 
 #btn-Enviar-Ticket button:hover {
-    color: white;
+    color: white !important;
+    /* background-color: rgba(0, 42, 113, 0.8) !important; */
 }
 
 @media only screen and (max-width: 600px) {
-  
+    #tela_abrir_chamado {
+        position: relative;
+    }
 }
 
 body{
