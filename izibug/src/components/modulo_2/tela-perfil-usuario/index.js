@@ -11,28 +11,48 @@ function Tela_Editar_Perfil() {
 
             <div id="forms_editar-perfil">
 
-                <h3>Nome</h3>
-                <input className="forms_up" type="text" />
+                <h1>Editar Perfil</h1>
 
-                <h3>EMAIL RONALDO</h3>
-                <input className="forms_up" type="text" />
+                <div id="forms_editar-perfil_I">
+                    <section>
+                        <h2>Username</h2>
+                        <input disabled={true} placeholder="Samuel Dias" id="username" />
+                    </section>
 
-                <h3>Categoria/cargo</h3>
-                <select className="input-form">
-                    <option value="TI">TI</option>
-                    <option value="Marketing">Marketing</option>
-                    <option value="RH">R.H</option>
-                    {/* <option value=""></option> */}
-                </select>
+                    <section>
+                        <h2>Email</h2>
+                        <input disabled={true} placeholder="sdf.dias.faria@gmail.com" id="username" />
+                    </section>
 
-                <h3>Alterar foto</h3>
-                <img src="https://lnb.com.br/wp-content/uploads/2016/10/logo-brasilia-1-150x150.png" />
+                    <section>
+                        <h2>Cargo</h2>
+                        <input placeholder="Cliente" id="username" />
+                    </section>
+                </div>
 
-                <h3>Alterar senha</h3>
-                <input className="forms_low" type="text" />
+                <div id="forms_editar-perfil_I">
+                    <div id="section_alterar-foto">
+                        <h2>Alterar foto</h2>
+                        <img src="https://evolvemvp.com/wp-content/uploads/2018/11/como-fazer-um-pitch-01-150x150.jpg" />
+                    </div>
 
-                <h3>Confirmar senha</h3>
-                <input className="forms_low" type="text" />
+                    <div id="forms_editar-perfil_II">
+                        <section>
+                            <h2>Alterar senha</h2>
+                            <input placeholder="Nova senha" id="username" />
+                        </section>
+
+                        <section>
+                            <h2>Confirmar senha</h2>
+                            <input placeholder="Confirmar senha" id="username" />
+                        </section>
+                    </div>
+
+                    {/* <div id="btn-Enviar-Ticket">
+                        <button>Enviar Report</button>
+                    </div> */}
+
+                </div>
 
             </div>
         </div>

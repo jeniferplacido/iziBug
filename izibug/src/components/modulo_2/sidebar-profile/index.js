@@ -8,7 +8,7 @@ function Sidebar_Profile() {
         <nav className="sidebar-profile">
             <section>
                 <img src="https://lnb.com.br/wp-content/uploads/2016/10/logo-brasilia-1-150x150.png" id="img-profile"></img>
-                <Link>samuel dias</Link>
+                <Link to="/perfil-usuario">samuel dias</Link>
             </section>
             <ul>
                 <Link to="/abrir-chamado">novo chamado</Link>

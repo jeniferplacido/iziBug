@@ -1,8 +1,9 @@
-#tela_visualizar_chamados {
+#Tela_Editar_Perfil {
     display: flex;
+    /* position: fixed; */
 }
 
-#forms_chamados-abertos {
+#forms_editar-perfil {
     width: 100%;
     height: auto;
     background-color: rgba(255, 255, 255, 0.13);
@@ -10,10 +11,109 @@
     border-radius: 5px;
 }
 
-#forms_chamados-abertos h1 {
+#forms_editar-perfil h1 {
     display: flex;
     justify-content: center;
     font-size: 35px;
+}
+
+#forms_editar-perfil h2 {
+    margin: 0 30px;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+#forms_editar-perfil input {
+    border-radius: 5px;
+    height: 50px;
+    font-size: 20px;
+    margin: 20px;
+    text-align: center;
+    color: white !important;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, .3);
+
+}
+
+#forms_editar-perfil textarea {
+    border-radius: 5px;
+    max-width: 600px;
+    max-height: 150px;
+    width: 600px;
+    height: 150px;
+    margin: 20px;
+}
+
+#forms_editar-perfil select {
+    width: 20rem;
+    height: 50px;
+    border-radius: 5px;
+    margin: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#forms_editar-perfil option {
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+#forms_editar-perfil_I {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px;
+}
+
+#forms_editar-perfil_I input{
+    width: 20rem;
+}
+
+#forms_editar-perfil_II {
+    display: flex;
+    flex-direction: column;
+}
+
+#forms_editar-perfil_II input {
+    /* margin: 20px; */
+    display: flex;
+    width: 50rem;
+}
+
+#section_alterar-foto {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#section_alterar-foto img{
+    margin-top: 18px !important;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 15px;
+    color: white;
+    -webkit-box-shadow: 0px 0px 16px 9px rgba(0, 0, 0, 0.07);
+    -moz-box-shadow: 0px 0px 16px 9px rgba(0, 0, 0, 0.07);
+    box-shadow: 0px 0px 16px 9px rgba(0, 0, 0, 0.07);
+}
+
+#btn-Enviar-Ticket button {
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    margin: 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #tela_abrir_chamado {
+        position: relative;
+    }
 }
 
 body{

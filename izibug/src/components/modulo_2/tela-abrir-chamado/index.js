@@ -14,18 +14,13 @@ function Tela_Abrir_Chamado() {
 
                 <div id="forms_abrir-chamado_I">
                     <section>
-                        <h2>Cliente</h2>
-                        <input className="input-form" disabled={true} placeholder="Samuel Dias" id="username" />
+                        <h2>Assunto</h2>
+                        <input id="assunto-Ticket" />
                     </section>
 
                     <section>
-                        <h2>Prioridade</h2>
-                        <select className="input-form">
-                            <option value="TI">ALTA</option>
-                            <option value="Marketing">MÉDIA</option>
-                            <option value="RH">BAIXA</option>
-                            {/* <option value=""></option> */}
-                        </select>
+                        <h2>Cliente</h2>
+                        <input className="input-form" disabled={true} placeholder="Samuel Dias" id="username" />
                     </section>
 
                     <section>
@@ -39,20 +34,29 @@ function Tela_Abrir_Chamado() {
                     </section>
 
                 </div>
-                <div id="forms_abrir-chamado_II">
+                <div id="forms_abrir-chamado_I">
                     <section>
-                        <h2>Assunto</h2>
-                        <input id="assunto-Ticket" />
+                        <h2>Mensagem</h2>
+                        <textarea id="mensagem-Ticket" />
                     </section>
+
+                    <div>
+                        <section>
+                            <h2>Prioridade</h2>
+                            <select className="input-form">
+                                <option value="TI">ALTA</option>
+                                <option value="Marketing">MÉDIA</option>
+                                <option value="RH">BAIXA</option>
+                                {/* <option value=""></option> */}
+                            </select>
+                        </section>
+
+                        <div id="btn-Enviar-Ticket">
+                            <button>Enviar Chamado</button>
+                        </div>
+                    </div>
                 </div>
-
-
-                <h2>Mensagem</h2>
-                <textarea id="mensagem-Ticket" />
-
-                <div id="btn-Enviar-Ticket">
-                    <button>Enviar Report</button>
-                </div>
+                
             </div>
         </div>
     )
