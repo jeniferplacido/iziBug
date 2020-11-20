@@ -6,58 +6,32 @@ import './style.css'
 
 function Tela_Vizualizar_Chamados() {
     return (
+
         <div id="tela_abrir_chamado">
             <Sidebar_Profile type="user"/>
 
             <div id="forms_abrir-chamado">
-            <h1>CHAMADOS ABERTOS</h1>
-
-                <div id="forms_abrir-chamado_I">
-                    <section>
-                        <h2>Assunto</h2>
-                        <input id="assunto-Ticket" />
-                    </section>
-
-                    <section>
-                        <h2>Cliente</h2>
-                        <input className="input-form" disabled={true} placeholder="Samuel Dias" id="username" />
-                    </section>
-
-                    <section>
-                        <h2>Setor</h2>
-                        <select className="input-form">
-                            <option value="TI">TI</option>
-                            <option value="Marketing">Marketing</option>
-                            <option value="RH">R.H</option>
-                            {/* <option value=""></option> */}
-                        </select>
-                    </section>
-
-                </div>
-                <div id="forms_abrir-chamado_I">
-                    <section>
-                        <h2>Mensagem</h2>
-                        <textarea id="mensagem-Ticket" />
-                    </section>
-
-                    <div>
-                        <section>
-                            <h2>Prioridade</h2>
-                            <select className="input-form">
-                                <option value="TI">ALTA</option>
-                                <option value="Marketing">MÉDIA</option>
-                                <option value="RH">BAIXA</option>
-                                {/* <option value=""></option> */}
-                            </select>
-                        </section>
-
-                        <div id="btn-Enviar-Ticket">
-                            <button>Enviar Chamado</button>
-                        </div>
+                <div style={{ width: '100px', textAlign: 'right' }} ><input type="text" /></div>
+                <div style={{ display: 'flex', marginTop: '50px' }}>
+                    <div className="container-card">
+                        <p>ID CHAMADO</p>
+                    </div>
+                    <div className="container-card">
+                        <p>ASSUNTO</p>
+                    </div>
+                    <div className="container-card">
+                        <p>RESPONSÁVEL</p>
+                    </div>
+                    <div className="container-card">
+                        <p>STATUS</p>
+                    </div>
+                    <div className="container-card">
+                        <p>DATA CRIAÇÃO</p>
                     </div>
                 </div>
-                
             </div>
+
+
         </div>
     )
 }
