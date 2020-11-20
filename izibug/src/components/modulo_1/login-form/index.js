@@ -99,6 +99,10 @@ function LoginForm(props) {
                 </div>
                 <button className="button button--primary full-width" onClick={props.mode === 'login' ? null : verifyForm} type="submit">{props.mode === 'login' ? 'Entrar' : 'Cadastrar'}</button>
                 {verifyMode()}
+                <br/><br/>
+                <Link to="/abrir-chamado" id="btn_Esqueci_Senha"> &#8594; Area Cliente</Link>
+                <br/>
+                <Link to="/admin/perfil-usuario" id="btn_Esqueci_Senha"> &#8594; Area Admin</Link>
             </form>
         </>
 

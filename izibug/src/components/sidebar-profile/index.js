@@ -26,7 +26,7 @@ function Sidebar_Profile(props) {
             <nav className="sidebar-profile">
                 <section>
                     <img src="https://lnb.com.br/wp-content/uploads/2016/10/logo-brasilia-1-150x150.png" id="img-profile"></img>
-                    <Link to="/admin/perfil-usuario">samuel dias</Link>
+                    <Link to="/admin/perfil-usuario">samuel dias admin</Link>
                 </section>
                 <ul>
                     <Link to="/admin/chamados">chamados</Link>

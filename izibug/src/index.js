@@ -11,7 +11,8 @@ import Tela_Abrir_Chamado from './components/modulo_2/tela-abrir-chamado'
 import Tela_Vizualizar_Chamados from './components/modulo_2/tela-chamados-abertos'
 import Tela_Editar_Perfil from './components/modulo_2/tela-perfil-usuario';
 
-// import Tela_Editar_Perfil_Admin from './components/modulo_3/tela-perfil-admin';
+import Tela_Editar_Perfil_Admin from './components/modulo_3/tela-perfil-admin';
+import Tela_Vizualizar_Chamados_Admin from './components/modulo_3/tela-visualizar_chamados-admin';
 
 import './css/style.css';
 
@@ -29,7 +30,8 @@ const App = () => (
         <Route exact path="/chamados-abertos" component={Tela_Vizualizar_Chamados} />
         <Route exact path="/perfil-usuario" component={Tela_Editar_Perfil} />
 
-        {/* <Route exact path="/admin/perfil-usuario" component={Tela_Editar_Perfil_Admin} /> */}
+        <Route exact path="/admin/perfil-usuario" component={Tela_Editar_Perfil_Admin} />
+        <Route exact path="/admin/chamados" component={Tela_Vizualizar_Chamados_Admin} />
     </>
 
 );
