@@ -4,30 +4,11 @@ let config = {
         host: 'localhost:27017',
         user: '',
         pass: '',
-        db: 'iziBug',
-        urlAdd: '?retryWrites=true&w=majority'
+        db: 'iziBug'
     },
     server:{
-        porta: 3000
+        porta: 4000
     },
-    // front:{
-    //     baseUrl: "xxxxxxxxxx",
-    //     forcarHTTPS: true, //Defina para true se desejar que o redirecionamento para HTTPS seja forçado (é necessário certificado SSL ativo)
-    //     caminho: "tôusandoaqui", //Aqui será definido a pasta de saída onde contém o index.html e os outros arquivos.
-    // },
-    back:{
-        // baseUrl: "https://homologacao.ambientemedicamento.com.br/API"
-        baseUrl: "http://localhost:3000/"
-    }
-    /* email:{
-       smtp:{
-           host: "smtp.umbler.com",
-           port: "587",
-           secure: false,
-           user: "contato@ambientemedicamento.com.br",
-           pass: "nPw#E8Ayw3LgtwQ"
-       }
-    } */
 }
 
 module.exports = config;
