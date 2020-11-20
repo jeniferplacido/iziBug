@@ -5,6 +5,10 @@ import Sidebar_Profile from '../sidebar-profile'
 import './style.css'
 
 function Tela_Vizualizar_Chamados() {
+
+    const e = () => {
+        fetch('http://localhost:4000').then(response => response.text()).then(response => console.log(response));
+    }
     return (
 
         <div id="tela_abrir_chamado">
@@ -13,6 +17,7 @@ function Tela_Vizualizar_Chamados() {
             <div id="forms_abrir-chamado">
                 <div style={{ width: '100px', textAlign: 'right' }} ><input type="text" /></div>
                 <div style={{ display: 'flex', marginTop: '50px' }}>
+                    <button onClick={e}>teste api</button>
                     <div className="container-card">
                         <p>ID CHAMADO</p>
                     </div>
