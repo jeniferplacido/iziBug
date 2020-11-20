@@ -14,8 +14,6 @@ function LoginForm(props) {
     // const [modalIsOpen, setModalIsOpen] = useState(false)
     // const [mensagemModal, setMensagemModal] = useState('')
 
-
-
     const verifyMode = () => {
         
         if (props.mode === 'login') {

@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Sidebar_Profile from '../sidebar-profile'
+import Sidebar_Profile from '../../sidebar-profile'
 
 import './style.css'
 
 function Tela_Vizualizar_Chamados() {
     return (
         <div id="tela_abrir_chamado">
-            <Sidebar_Profile />
+            <Sidebar_Profile type="user"/>
 
             <div id="forms_abrir-chamado">
             <h1>CHAMADOS ABERTOS</h1>
