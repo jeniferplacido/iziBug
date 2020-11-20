@@ -3,14 +3,14 @@ const router = express.Router();
 const { resposta } = require('../functions/resposta-json');
 const { model } = require('mongoose');
 const sha512 = require('js-sha512');
-const axios = require('axios');
-const btoa = require('btoa');
-const config = require('../config');
+const allowCors = require('../middlewares/cors')
+
 
 router.post('/', async (req, res) => {
   let body = req.body;
+  console.log(body)
   try {
-    body.senha = sha512(body.senha);
+    body.password = sha512(body.password);
     const response = await model('User').create(body);
     return resposta(res, 200, 'OK', 'Usuário criado com sucesso!', response)
   } catch (error) {
@@ -42,7 +42,7 @@ router.put('/', async (req, res) => {
       const response = await model('User').findOne({ token: body.token }).update(body);
       return resposta(res, 200, 'OK', 'Usuário atualizado com sucesso!', response)
     } else {
-      return resposta(res, 400, 'ERRO', 'Ocorreu um erro pois o campo "token" não foi enviado!', error)
+      return resposta(res, 400, 'ERRO', 'Ocorreu um erro pois o campo "token" não foi enviado!')
     }
   } catch (error) {
     resposta(res, 400, 'ERRO', 'Ocorreu um erro ao atualizar usuário,tente novamente!', String(error))
@@ -57,7 +57,7 @@ router.delete('/', async (req, res) => {
       const response = await model('User').deleteOne({ _id: body._id });
       return resposta(res, 200, 'OK', 'Usuário deletado com sucesso!', response)
     } else {
-      return resposta(res, 400, 'ERRO', 'Ocorreu um erro pois o campo "_id" não foi enviado!', error)
+      return resposta(res, 400, 'ERRO', 'Ocorreu um erro pois o campo "_id" não foi enviado!')
     }
   } catch (error) {
     resposta(res, 400, 'ERRO', 'Ocorreu um erro ao deletar o usuário, tente novamente!', String(error))
@@ -84,85 +84,5 @@ router.get('/auth', async (req, res) => {
   }
 })
 
-// -- Email Routes
-
-/* router.post('/email/recoveryPassword', async (req, res) => {
-  const body = req.body;
-  try {
-    let user = await model('User').find({ email: body.email });
-    user = user[0];
-    if (!user) {
-      resposta(res, 400, 'ERRO', 'Usuário não encontrado!')
-    } else {
-      let link = `${config.front.baseUrl}/recuperar-senha/${user.token}`
-      let html = `<h1>Link de recuperação de senha</h1>
-       <p>diawdwadojwaoidjwa</p>
-       <br/>
-       <a href='${link}'>${link}</a>
-       <br/><br/>
-       <p>Atenciosamente equipe Ambiente Medicamento.</p>`;
-
-      axios.post(config.back.baseUrl + '/email/send', {
-        toName: user.nome,
-        to: user.email,
-        subject: "Ambiente Medicamento - Recuperação de senha.",
-        base64Html: btoa(html)
-      }).then(function (response) {
-        resposta(res, 200, 'OK', 'Email enviado.', String(response))
-      }).catch(function (error) {
-        resposta(res, 400, 'ERRO', 'Erro no envio do email', String(error))
-      });
-    }
-  } catch (error) {
-    resposta(res, 400, 'ERRO', 'Erro Inesperado', String(error))
-  }
-})
-
-router.post('/email/verifyEmail', async (req, res) => {
-  const body = req.body;
-  try {
-    let user = await model('User').find({ email: body.email });
-    user = user[0];
-    if (!user) {
-      resposta(res, 400, 'ERRO', 'Usuário não encontrado!')
-    } else {
-      let link = `${config.front.baseUrl}/confirmar-email/${user.token}`
-      let html = `<h1>Link de Confirmação de E-mail</h1>
-         <p>Olá, Veja texto abaixo</p>
-         <br/>
-         <a href='${link}'>${link}</a>
-         <br/><br/>
-         <p>Atenciosamente equipe Ambiente Medicamento.</p>`;
-
-      axios.post(config.back.baseUrl + '/email/send', {
-        toName: user.nome,
-        to: user.email,
-        subject: "Ambiente Medicamento - Confirmação de e-mail.",
-        base64Html: btoa(html)
-      }).then(function (response) {
-        resposta(res, 200, 'OK', 'Email enviado.', String(response))
-      }).catch(function (error) {
-        resposta(res, 400, 'ERRO', 'Erro no envio do email', String(error))
-      });
-    }
-  } catch (error) {
-    resposta(res, 400, 'ERRO', 'Erro Inesperado', String(error))
-  }
-})
-
-
-router.post('/verifyEmail', async (req, res) => {
-  const body = req.body;
-  try {
-    if (body.token) {
-      const response = await model('User').findOne({ token: body.token }).update({emailValido: true});
-      return resposta(res, 200, 'OK', 'Usuário atualizado com sucesso!', response)
-    } else {
-      return resposta(res, 400, 'ERRO', 'Ocorreu um erro pois o campo "token" não foi enviado!', error)
-    }
-  } catch (error) {
-    resposta(res, 400, 'ERRO', 'Ocorreu um erro ao atualizar usuário,tente novamente!', String(error))
-  }
-}); */
 
 module.exports = router;

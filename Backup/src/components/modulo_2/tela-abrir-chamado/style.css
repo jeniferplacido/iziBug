@@ -2,58 +2,37 @@
     display: flex;
 }
 
-.container-card {
-    background-color: rgba(255, 255, 255, 0.13);
-    width: 200px; 
-    height: 500px; 
-    margin: 20px; 
-    text-align: center;
-} 
-
 #forms_abrir-chamado {
-    flex: 1;
     width: 100%;
     height: auto;
     background-color: rgba(255, 255, 255, 0.13);
-    margin: 20px;
-    border-radius: 10px;
-    flex-direction: column;
-    min-width: 300px;
+    margin: 50px;
+    border-radius: 5px;
 }
 
-
-
 #forms_abrir-chamado h1 {
-    flex: 1;
-    width: 100%;
-    height: auto;
-    background-color: rgba(255, 255, 255, 0.13);
-    margin: 20px;
-    border-radius: 10px;
-    flex-direction: column;
-    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    font-size: 35px;
 }
 
 #forms_abrir-chamado h2 {
-    flex: 1;
-    width: 100%;
-    height: auto;
-    background-color: rgba(255, 255, 255, 0.13);
-    margin: 20px;
-    border-radius: 10px;
-    flex-direction: column;
-    min-width: 300px;
+    margin: 0 30px;
+    text-transform: uppercase;
+    font-size: 30px;
 }
 
 #forms_abrir-chamado input {
-    flex: 1;
-    width: 100%;
-    height: auto;
-    background-color: rgba(255, 255, 255, 0.13);
+    border-radius: 5px;
+    height: 50px;
+    font-size: 20px;
     margin: 20px;
-    border-radius: 10px;
-    flex-direction: column;
-    min-width: 300px;
+    /* text-align: center; */
+    color: white !important;
+    outline: none;
+    border: none;
+    background-color: rgba(0, 0, 0, .3);
+
 }
 
 #forms_abrir-chamado textarea {
@@ -119,11 +98,14 @@
 }
 
 #btn-Enviar-Ticket button:hover {
-    color: white;
+    color: white !important;
+    /* background-color: rgba(0, 42, 113, 0.8) !important; */
 }
 
 @media only screen and (max-width: 600px) {
-  
+    #tela_abrir_chamado {
+        position: relative;
+    }
 }
 
 body{

@@ -1,10 +1,11 @@
 const mongoose = require('mongoose');
 const config = require('../config');
+
 let MONGO_URL = `mongodb://`;
 if (config.mongodb.user) {
     MONGO_URL += `${config.mongodb.user}:${config.mongodb.pass}@${config.mongodb.host}/${config.mongodb.db}${config.mongodb.urlAdd}`;
 } else {
-    MONGO_URL += `${config.mongodb.host}/${config.mongodb.db}${config.mongodb.urlAdd}`;
+    MONGO_URL += `${config.mongodb.host}/${config.mongodb.db}`;
 }
 
 function connect() {
