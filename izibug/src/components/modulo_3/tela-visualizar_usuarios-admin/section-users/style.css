@@ -29,3 +29,32 @@
     cursor: pointer;
     margin: auto;
 }
+
+.btn-option-yes {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: black;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.btn-option-yes:hover {
+    color: #00e6f0;
+}
+
+.btn-option-no {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: black;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.btn-option-no:hover {
+    color: #f00020;
+}
+
+.ReactModal__Content--after-open section{
+    display: flex;
+    justify-content: center;
+}
