@@ -1,19 +1,25 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+
 import './style.css'
 
-function sidebar_profile() {
+function Sidebar_Profile() {
     return (
         <nav className="sidebar-profile">
-            <img src="https://lnb.com.br/wp-content/uploads/2016/10/logo-brasilia-1-150x150.png"></img>
+            <section>
+                <img src="https://lnb.com.br/wp-content/uploads/2016/10/logo-brasilia-1-150x150.png" id="img-profile"></img>
+                <Link to="/perfil-usuario">samuel dias</Link>
+            </section>
             <ul>
-                <li>nome</li>
-                <li>chamados</li>
-                <li>usuários</li>
-                <li>relatórios</li>
-                <li>sair</li>
+                <Link to="/abrir-chamado">novo chamado</Link>
+                <Link to="/chamados-abertos">chamados abertos</Link>
+                <Link to="/" id="campo-loggout">
+                    <img src="https://www.flaticon.com/svg/static/icons/svg/2919/2919640.svg" id="img-loggout"/>
+                    <p>sair</p>
+                </Link>
             </ul>
         </nav>
     )
 }
 
-export default sidebar_profile;
+export default Sidebar_Profile;

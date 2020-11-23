@@ -2,14 +2,12 @@
 
 .sidebar-profile {
     display: flex;
-    /* flex: 50px; */
     flex-direction: column;
     text-align: center;
     border-radius: 5px;
     width: 200px;
     height: fit-content;
-    /* overflow: hidden; */
-    margin: 50px;
+    margin: 50px 20px;
     font-size: 1.4rem;
     padding: 10px 0px;
     font-family: 'Poppins', sans-serif;

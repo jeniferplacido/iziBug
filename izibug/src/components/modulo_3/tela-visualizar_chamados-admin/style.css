@@ -1,0 +1,23 @@
+#tela_visualizar_chamados {
+    display: flex;
+}
+
+#container-card {
+    background-color: rgba(255, 255, 255, 0.13);
+    width: 200px; 
+    height: auto; 
+    margin: 20px; 
+    text-align: center;
+    border-radius: 5px;
+} 
+
+#coluna_chamados {
+    display: flex;
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.13);
+    margin: 50px;
+    border-radius: 5px;
+    flex-direction: row;
+    min-width: 300px;
+}

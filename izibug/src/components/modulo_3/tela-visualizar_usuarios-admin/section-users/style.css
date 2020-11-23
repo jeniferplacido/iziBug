@@ -1,0 +1,60 @@
+#card-usuarios {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    width: 68.1rem; 
+    height: 50px; 
+    margin: 20px; 
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.13);
+} 
+
+#card-usuarios h3 {
+    font-size: 1rem;
+    margin: auto;
+    text-transform: uppercase;
+}
+
+#card-usuarios img {
+    width: 1.5rem;
+    height: 1.5rem;
+    cursor: pointer;
+    /* margin: auto; */
+}
+
+#card-usuarios span {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: red;
+    cursor: pointer;
+    margin: auto;
+}
+
+.btn-option-yes {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: black;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.btn-option-yes:hover {
+    color: #00e6f0;
+}
+
+.btn-option-no {
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: black;
+    margin: 1rem;
+    cursor: pointer;
+}
+
+.btn-option-no:hover {
+    color: #f00020;
+}
+
+.ReactModal__Content--after-open section{
+    display: flex;
+    justify-content: center;
+}

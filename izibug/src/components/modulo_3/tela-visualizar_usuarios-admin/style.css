@@ -1,0 +1,22 @@
+#tela_visualizar_usuarios {
+    display: flex;
+}
+
+#section-usuarios {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 50px;
+    border-radius: 5px;
+    min-width: 300px;
+    background-color: rgba(255, 255, 255, 0.13);
+}
+
+#section-usuarios h2 {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}

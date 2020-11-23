@@ -2,14 +2,7 @@ let { Schema, model } = require('mongoose')
 
 // Model - schema
 let userSchema = new Schema({
-    token: {
-        type: Schema.Types.ObjectId,
-        unique: true,
-        required: true,
-        auto: true,
-        index: true
-      },
-    nome: {
+    fullname: {
         type: String,
         required: true,
     },
@@ -20,12 +13,7 @@ let userSchema = new Schema({
         lowercase: true,
         index: true
     },
-    emailValido: {
-        type: Boolean,
-        default: false,
-        required: true
-    },
-    senha: {
+    password: {
         type: String,
         required: true,
         select: false,
