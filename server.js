@@ -2,7 +2,7 @@ const config = require("./config");
 const express = require('express');
 const connectDB = require('./functions/connectDB');
 const app = express();
-const allowCors = require('./middlewares/cors')
+const allowCors = require('cors')
 const bodyParser = require('body-parser')
 
 process.env.PORT = config.server.porta;
@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 app.use(express.json());
 
 // Rotas da API
-app.use(allowCors)
+app.use(allowCors())
 app.use('/', require('./routes/index')); // Rotas da API
 app.use('/tasks', require('./routes/tasksRoutes'));
 app.use('/user', require('./routes/usersRoutes'));

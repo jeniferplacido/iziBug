@@ -3,7 +3,7 @@ const router = express.Router();
 const { resposta } = require('../functions/resposta-json');
 const { model } = require('mongoose');
 const sha512 = require('js-sha512');
-const allowCors = require('../middlewares/cors')
+
 
 
 router.post('/', async (req, res) => {
