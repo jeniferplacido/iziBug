@@ -8,6 +8,15 @@ const URL = 'https://izibug2.herokuapp.com/'
 // import Modal from 'react-bootstrap/Modal'
 
 
+export default class Users extends React.Component {
+    state = {
+        fullname: '',
+        email: '',
+        password: '',
+    }
+
+
+
 function LoginForm(props) {
     // eslint-disable-next-line
 
@@ -31,9 +40,9 @@ function LoginForm(props) {
     const verifyForm = async (e) => {
         e.preventDefault();
         let user = {
-            fullname: document.getElementById('fullname').value,
-            email: document.getElementById('email').value,
-            password: document.getElementById('password').value,
+            fullname: this.state.fullname,
+            email: this.state.email,
+            password: this.state.password
         }
         // const fullname = document.getElementById('fullname').value
         // const email = document.getElementById('email').value
@@ -115,6 +124,7 @@ function LoginForm(props) {
         </>
 
     )
+}
 }
 
 export default LoginForm;
