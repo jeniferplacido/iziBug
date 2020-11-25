@@ -1,15 +1,16 @@
 
+import './style.css'
 import React, { useEffect, useState } from 'react'
 import io from 'socket.io-client'
-import uuid from 'uuid'
+import uuid from 'react-uuid';
+
 
 const myId = uuid()
 const socket = io('http://localhost:8080')
 socket.on('connect', () => console.log('[IO] Connect => A new connection has been established'))
 
-import Sidebar_Profile from '../../sidebar-profile'
+// import Sidebar_Profile from '../../sidebar-profile'
 
-import './style.css'
 
 function Tela_Visualizar_Chat() {
     const [message, updateMessage] = useState('')
@@ -39,13 +40,13 @@ function Tela_Visualizar_Chat() {
     return (
 
         <div id="tela_visualizar_chamados">
-            <Sidebar_Profile type="user" />
+            {/* <Sidebar_Profile type="user" /> */}
 
         <main className="container">
             <ul className="list">
                 { messages.map((m, index) => (
                     <li
-                        className={`list__item list__item--${m.id === myId ? 'mine' : 'other'}`}
+                    className={`list_item list_item--${m.id === myId ? 'mine' : 'other'}`}
                         key={index}
                     >
                         <span className={`message message--${m.id === myId ? 'mine' : 'other'}`}>
