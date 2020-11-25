@@ -35,32 +35,35 @@ function LoginForm(props) {
             email: document.getElementById('email').value,
             password: document.getElementById('password').value,
         }
-        const fullname = document.getElementById('fullname').value
-        const email = document.getElementById('email').value
-        const password = document.getElementById('password').value
-        const repeatpassword = document.getElementById('repeatpassword').value
+        // const fullname = document.getElementById('fullname').value
+        // const email = document.getElementById('email').value
+        // const password = document.getElementById('password').value
+        // const repeatpassword = document.getElementById('repeatpassword').value
 
-        if (fullname === '') {
-            // setMensagemModal("Campo 'Nome' não pode ser vazio")
-        } else {
-            if (email === '') {
-                // setMensagemModal("Campo 'Email' não pode ser vazio")
-            } else {
-                if (password === repeatpassword) {
-                    // setMensagemModal('Usuário criado com sucesso!')
-                let res = await axios.post(URL + 'user/', { user })
-                       console.log(res)
-                } else if (password === '') {
-                    let res = await axios.post(URL + 'user/', { user })
-                       console.log(res)
-                    // setMensagemModal("Campo 'Senha' não pode ser vazio")
-                } else if (repeatpassword === '') {
-                    // setMensagemModal("Campo 'Confirmar Senha' não pode ser vazio")
-                } else {
-                    // setMensagemModal('As senhas são diferentes!')
-                }
-            }
-        }
+        let res = await axios.post(URL + 'user/', { user })
+        console.log(res)
+
+        // if (fullname === '') {
+        //     // setMensagemModal("Campo 'Nome' não pode ser vazio")
+        // } else {
+        //     if (email === '') {
+        //         // setMensagemModal("Campo 'Email' não pode ser vazio")
+        //     } else {
+        //         if (password === repeatpassword) {
+        //             // setMensagemModal('Usuário criado com sucesso!')
+        //         let res = await axios.post(URL + 'user/', { user })
+        //                console.log(res)
+        //         } else if (password === '') {
+        //             let res = await axios.post(URL + 'user/', { user })
+        //                console.log(res)
+        //             // setMensagemModal("Campo 'Senha' não pode ser vazio")
+        //         } else if (repeatpassword === '') {
+        //             // setMensagemModal("Campo 'Confirmar Senha' não pode ser vazio")
+        //         } else {
+        //             // setMensagemModal('As senhas são diferentes!')
+        //         }
+        //     }
+        // }
         // openModal()
     }
 
