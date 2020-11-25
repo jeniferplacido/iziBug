@@ -15,7 +15,7 @@ function LoginForm(props) {
     // const [mensagemModal, setMensagemModal] = useState('')
 
     const verifyMode = () => {
-        
+
         if (props.mode === 'login') {
             return (
                 <Link to="/esqueci-minha-senha" id="btn_Esqueci_Senha"> &#8594; Esqueci minha senha</Link>
@@ -28,7 +28,7 @@ function LoginForm(props) {
 
     }
 
-    const  verifyForm = async (e) => {
+    const verifyForm = async (e) => {
         e.preventDefault();
         let user = {
             fullname: document.getElementById('fullname').value,
@@ -40,11 +40,14 @@ function LoginForm(props) {
         // const password = document.getElementById('password').value
         // const repeatpassword = document.getElementById('repeatpassword').value
 
-       await axios.post(URL + 'user/', { user })
-       .then(res => {
-        console.log(res);
-        console.log(res.data);
-      })
+        await axios.post(URL + 'user/', { user })
+            .then(res => {
+                console.log(res);
+                console.log(res.data);
+            })
+            .catch(error => {
+                console.log(error)
+            });
         // if (fullname === '') {
         //     // setMensagemModal("Campo 'Nome' não pode ser vazio")
         // } else {
@@ -70,7 +73,7 @@ function LoginForm(props) {
     }
 
     // function openModal() {
-        // setModalIsOpen(true)
+    // setModalIsOpen(true)
     // }
 
     // function closeModal() {
@@ -104,9 +107,9 @@ function LoginForm(props) {
                 </div>
                 <button className="button button--primary full-width" onClick={props.mode === 'login' ? null : verifyForm} type="submit">{props.mode === 'login' ? 'Entrar' : 'Cadastrar'}</button>
                 {verifyMode()}
-                <br/><br/>
+                <br /><br />
                 <Link to="/abrir-chamado" id="btn_Esqueci_Senha"> &#8594; Area Cliente</Link>
-                <br/>
+                <br />
                 <Link to="/admin/perfil-usuario" id="btn_Esqueci_Senha"> &#8594; Area Admin</Link>
             </form>
         </>
