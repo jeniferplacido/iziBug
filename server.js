@@ -5,8 +5,6 @@ const app = express();
 const allowCors = require('cors')
 const bodyParser = require('body-parser')
 
-process.env.PORT = config.server.porta;
-
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 app.use(express.json());
@@ -17,8 +15,7 @@ app.use('/', require('./routes/index')); // Rotas da API
 app.use('/tasks', require('./routes/tasksRoutes'));
 app.use('/user', require('./routes/usersRoutes'));
 
-
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 5000, () => {
     console.log(`Escutando na ${process.env.PORT}!`);
     let connection = connectDB.connect();
 
