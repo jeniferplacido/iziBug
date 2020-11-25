@@ -40,9 +40,11 @@ function LoginForm(props) {
         // const password = document.getElementById('password').value
         // const repeatpassword = document.getElementById('repeatpassword').value
 
-        let res = await axios.post(URL + 'user/', { user })
-        console.log(res)
-
+       await axios.post(URL + 'user/', { user })
+       .then(res => {
+        console.log(res);
+        console.log(res.data);
+      })
         // if (fullname === '') {
         //     // setMensagemModal("Campo 'Nome' não pode ser vazio")
         // } else {
