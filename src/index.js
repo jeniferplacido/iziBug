@@ -9,12 +9,13 @@ import Tela_Alterar_Senha from './components/modulo_1/esqueci-senha/tela-alterar
 
 import Tela_Abrir_Chamado from './components/modulo_2/tela-abrir-chamado'
 import Tela_Vizualizar_Chamados from './components/modulo_2/tela-chamados-abertos'
-import Tela_Editar_Perfil from './components/modulo_2/tela-perfil-usuario';
+import Tela_Editar_Perfil from './components/modulo_2/tela-perfil-usuario'
+import Tela_Chat_Chamados from './components/modulo_2/tela-chat-chamado-aberto'
 // import Tela_Visualizar_Chat from './components/modulo_2/tela-chat-test2';
 
 import Tela_Editar_Perfil_Admin from './components/modulo_3/tela-perfil-admin';
-import Tela_Vizualizar_Chamados_Admin from './components/modulo_3/tela-visualizar_chamados-admin';
-import Tela_Vizualizar_Usuarios_Admin from './components/modulo_3/tela-visualizar_usuarios-admin';
+import Tela_Vizualizar_Chamados_Admin from './components/modulo_3/tela-visualizar_chamados-admin'
+import Tela_Vizualizar_Usuarios_Admin from './components/modulo_3/tela-visualizar_usuarios-admin'
 
 import './css/style.css';
 
@@ -31,6 +32,7 @@ const App = () => (
         <Route exact path="/abrir-chamado" component={Tela_Abrir_Chamado} />
         <Route exact path="/chamados-abertos" component={Tela_Vizualizar_Chamados} />
         <Route exact path="/perfil-usuario" component={Tela_Editar_Perfil} />
+        <Route exact path="/chamados-abertos/chat-chamado-1" component={Tela_Chat_Chamados} />
         {/* <Route exact path="/visualizar-chat" component={Tela_Visualizar_Chat} /> */}
 
         {/* Modulo 3 */}

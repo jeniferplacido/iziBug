@@ -8,7 +8,12 @@
     height: auto; 
     margin: 1.25rem; 
     text-align: center;
-} 
+}
+
+#container-card-cliente a {
+    text-decoration: none;
+    color: white;
+}
 
 #coluna_chamados-cliente {
     display: flex;

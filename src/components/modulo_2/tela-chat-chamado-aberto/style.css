@@ -1,0 +1,65 @@
+#tela_visualizar_chamados {
+    display: flex;
+}
+
+#chat-Cliente {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.13);
+    margin: 50px;
+    border-radius: 5px;
+    min-width: 300px;
+    position: relative;
+}
+
+#chat-Cliente section{
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    top: 10px;
+    height: 29rem;
+    /* background-color: black; */
+}
+
+#section-insert-messages {
+    display: flex;
+    flex-direction: row;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    position: absolute;
+    align-items: center;
+}
+
+#section-insert-messages input{
+    display: flex;
+    width: 63rem;
+    padding: 0 0 40px 0;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+}
+
+#section-insert-messages img{
+    width: 3rem;
+    height: 3rem;
+    margin: auto;
+    cursor: pointer;
+}
+
+.message--mine {
+    /* background: #c3e88d;
+    border-color: #82be27; */
+    text-align: right;
+    font-size: 1.2rem;
+}
+
+.message--other {
+    /* background: #89ddff;
+    border-color: #1abeff; */
+    font-size: 1.2rem;
+}

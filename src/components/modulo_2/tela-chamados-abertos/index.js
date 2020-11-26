@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import Sidebar_Profile from '../../sidebar-profile'
 
@@ -13,15 +14,27 @@ function Tela_Vizualizar_Chamados() {
             <div id="coluna_chamados-cliente">
                 <div id="container-card-cliente">
                     <h3>ID CHAMADO</h3>
+
+                    <Link to="/chamados-abertos/chat-chamado-1">1</Link>
+
                 </div>
                 <div id="container-card-cliente">
                     <h3>ASSUNTO</h3>
+
+                    <Link to="/chamados-abertos/chat-chamado-1">Bug Tela Login</Link>
+
                 </div>
                 <div id="container-card-cliente">
                     <h3>STATUS</h3>
+
+                    <Link to="/chamados-abertos/chat-chamado-1">Aberto</Link>
+
                 </div>
                 <div id="container-card-cliente">
                     <h3>DATA CRIAÇÃO</h3>
+
+                    <Link to="/chamados-abertos/chat-chamado-1">26/11/2020</Link>
+
                 </div>
             </div>
 
