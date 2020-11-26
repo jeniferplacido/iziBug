@@ -9,15 +9,18 @@ const URL = 'https://izibug2.herokuapp.com/'
 
 
 export default class Users extends React.Component {
-    state = {
-        fullname: '',
-        email: '',
-        password: '',
+    constructor(props) {
+        super(props)
+        this.state = {
+            fullname: '',
+            email: '',
+            password: '',
+        }
     }
 
 
 
-    LoginForm(props) {
+    LoginForm = () => {
     // eslint-disable-next-line
 
     // const [modalIsOpen, setModalIsOpen] = useState(false)
