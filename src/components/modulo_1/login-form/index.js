@@ -20,7 +20,7 @@ export default class Users extends React.Component {
 
 
 
-    LoginForm = () => {
+    LoginForm = (props) => {
     // eslint-disable-next-line
 
     // const [modalIsOpen, setModalIsOpen] = useState(false)
