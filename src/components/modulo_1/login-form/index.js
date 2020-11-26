@@ -129,5 +129,3 @@ export default class Users extends React.Component {
     )
 }
 }
-
-export default LoginForm;
