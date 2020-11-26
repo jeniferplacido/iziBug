@@ -4,7 +4,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import './style.css'
 
-const URL = 'localhost:4000/'
+const URL = 'https://izibug2.herokuapp.com/'
 // import Modal from 'react-bootstrap/Modal'
 
 
@@ -51,8 +51,13 @@ function LoginForm(props) {
                 let res = await axios.post(URL + 'user/', { user })
                        console.log(res)
                 } else if (password === '') {
+                    try {
                     let res = await axios.post(URL + 'user/', { user })
                        console.log(res)
+                    }
+                    catch (error){
+                        console.log(error)
+                    }
                     // setMensagemModal("Campo 'Senha' não pode ser vazio")
                 } else if (repeatpassword === '') {
                     // setMensagemModal("Campo 'Confirmar Senha' não pode ser vazio")
