@@ -6,6 +6,7 @@ if (config.mongodb.user) {
     MONGO_URL += `${config.mongodb.user}:${config.mongodb.pass}@${config.mongodb.host}/${config.mongodb.db}${config.mongodb.urlAdd}`;
 } else {
     MONGO_URL += `${config.mongodb.host}/${config.mongodb.db}`;
+    console.log(MONGO_URL)
 }
 
 function connect() {

@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
 import Sidebar_Profile from '../../sidebar-profile'
 
 import './style.css'
 
 function Tela_Vizualizar_Chamados() {
+
     return (
 
         <div id="tela_visualizar_chamados">
@@ -36,6 +36,7 @@ function Tela_Vizualizar_Chamados() {
                     <Link to="/chamados-abertos/chat-chamado-1">26/11/2020</Link>
 
                 </div>
+                
             </div>
 
 
